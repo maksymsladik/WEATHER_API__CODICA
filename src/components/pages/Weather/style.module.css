@@ -1,0 +1,10 @@
+.search_panel {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  text-align: center;
+}
