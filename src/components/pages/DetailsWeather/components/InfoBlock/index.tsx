@@ -4,10 +4,10 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./makeStyles";
 import { roundMath } from "../../../../../helpers";
-import { DetailsWeatherInfoProps } from "../../../../interfaces";
+import { DetailsWeatherToday } from "../../../../interfaces";
 import style from "./style.module.css";
 
-const InfoBlock: React.FC<DetailsWeatherInfoProps> = ({ name, main, wind }) => {
+const InfoBlock: React.FC<DetailsWeatherToday> = ({ name, main, wind }) => {
   const classes = useStyles();
 
   if (!name) {

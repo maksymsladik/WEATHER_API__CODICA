@@ -10,7 +10,7 @@ import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { RouteParams } from "../../interfaces";
 import style from "./style.module.css";
 
-const DetailWeather: React.FC<RouteComponentProps<RouteParams>> = (props) => {
+const DetailsWeather: React.FC<RouteComponentProps<RouteParams>> = (props) => {
   const { id } = props.match.params;
 
   const {
@@ -48,4 +48,4 @@ const DetailWeather: React.FC<RouteComponentProps<RouteParams>> = (props) => {
   );
 };
 
-export default DetailWeather;
+export default DetailsWeather;

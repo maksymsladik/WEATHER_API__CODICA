@@ -58,7 +58,7 @@ export interface RouteParams {
 }
 
 export interface DetailsWeatherState {
-    detailsWeatherToday: object;
+    detailsWeatherToday: DetailsWeatherToday;
     weatherForecast: Array<WeatherForecastData>;
     dataDays: Array<string>;
     selectedDay: string;
@@ -78,7 +78,7 @@ export interface ItemDay {
     dt_txt: string;
 }
 
-export interface DetailsWeatherInfoProps {
+export interface DetailsWeatherToday {
     name?: string;
     main?: {
         temp: number;
@@ -91,15 +91,14 @@ export interface DetailsWeatherInfoProps {
     };
 }
 
-export interface SelectProps {
-    dataDays: Array<string>;
+export interface SelectProps extends ListSelectProps {
     selectedDay: string;
     setSelectedDay: (e: string) => void;
     dispatch: (dispatch: any) => void;
 }
 
 export interface ListSelectProps {
-    dataDays: string[];
+    dataDays: Array<string>;
 }
 
 export interface ItemSelectProps {

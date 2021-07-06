@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { DetailsWeatherState, WeatherForecastData } from "../../../interfaces";
+import {
+  DetailsWeatherState,
+  WeatherForecastData,
+  DetailsWeatherToday,
+} from "../../../interfaces";
 
 const detailsWeatherReducer = createSlice({
   name: "detailsWeather",
@@ -17,7 +21,7 @@ const detailsWeatherReducer = createSlice({
         selectedDay: string;
         dataDays: Array<string>;
         weatherForecast: Array<WeatherForecastData>;
-        detailsWeatherToday: object;
+        detailsWeatherToday: DetailsWeatherToday;
       }>
     ) {
       state.selectedDay = action.payload.selectedDay;
